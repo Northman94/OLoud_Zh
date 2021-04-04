@@ -265,6 +265,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e77842103afa4691be6b5be191f9fdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oiginalCArd: {fileID: 0}
+  images:
+  - {fileID: 21300000, guid: 0eb309c8c8257481dbe945ec2d2dba01, type: 3}
+  - {fileID: 21300000, guid: bfa118bd86812444bb19ed17ca7b1d53, type: 3}
+  - {fileID: 21300000, guid: b25b4922b8068453d87b09861a26833f, type: 3}
+  - {fileID: 21300000, guid: 22e75d2e7090c4992a25fc540536f40a, type: 3}
 --- !u!4 &1118335231
 Transform:
   m_ObjectHideFlags: 0
