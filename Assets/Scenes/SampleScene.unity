@@ -265,7 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e77842103afa4691be6b5be191f9fdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oiginalFaceCard: {fileID: 1206486333}
+  originalFaceCard: {fileID: 1206486333}
   images:
   - {fileID: 21300000, guid: 0eb309c8c8257481dbe945ec2d2dba01, type: 3}
   - {fileID: 21300000, guid: bfa118bd86812444bb19ed17ca7b1d53, type: 3}
