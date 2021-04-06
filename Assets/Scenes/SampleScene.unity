@@ -265,12 +265,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e77842103afa4691be6b5be191f9fdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oiginalCArd: {fileID: 0}
+  oiginalFaceCard: {fileID: 1206486333}
   images:
   - {fileID: 21300000, guid: 0eb309c8c8257481dbe945ec2d2dba01, type: 3}
   - {fileID: 21300000, guid: bfa118bd86812444bb19ed17ca7b1d53, type: 3}
-  - {fileID: 21300000, guid: b25b4922b8068453d87b09861a26833f, type: 3}
   - {fileID: 21300000, guid: 22e75d2e7090c4992a25fc540536f40a, type: 3}
+  - {fileID: 21300000, guid: b25b4922b8068453d87b09861a26833f, type: 3}
 --- !u!4 &1118335231
 Transform:
   m_ObjectHideFlags: 0
@@ -279,7 +279,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1118335229}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.7668717, y: 0.29131913, z: 15.411128}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -376,6 +376,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1206486332}
+  - component: {fileID: 1206486333}
   - component: {fileID: 1206486331}
   - component: {fileID: 1206486334}
   m_Layer: 0
@@ -451,6 +452,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1206486333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206486330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2f23b7c8e844dcf8eb48cb0bc3055b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1118335230}
+  cardBack: {fileID: 1174280713}
 --- !u!61 &1206486334
 BoxCollider2D:
   m_ObjectHideFlags: 0

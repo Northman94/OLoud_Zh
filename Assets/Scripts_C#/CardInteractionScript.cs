@@ -5,10 +5,10 @@ using UnityEngine;
 public class CardInteractionScript : MonoBehaviour
 {
     [SerializeField]
-    private SceneControllerScript controllerScript;
+    private SceneControllerScript controller; //SceneController Obj, with relevant Script on it
 
     [SerializeField]
-    private GameObject cardBack; //Child Obj to cover Face of a Card
+    private GameObject cardBack; //Child Obj (CardBack) to cover Face of a Card
 
     private int _id;
 
