@@ -29,7 +29,16 @@ public class SceneControllerScript : MonoBehaviour
 
     public void CardRevealed(CardInteractionScript card)
     {
-        //????
+        if (_firstRevealed == null)
+        {
+            _firstRevealed = card;
+        }
+        else
+        {
+            _secondRevealed = card;
+
+            Debug.Log("Match? " + (_firstRevealed.id == _secondRevealed.id));
+        }
     }
 
 
