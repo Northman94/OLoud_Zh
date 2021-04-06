@@ -14,10 +14,23 @@ public class SceneControllerScript : MonoBehaviour
 
     [SerializeField]
     private CardInteractionScript originalFaceCard; //CardFace in a Scene reference, with relevant Script on it
-
     [SerializeField]
     private Sprite[] images; // Array of Links to Sprite Faces
 
+
+    private CardInteractionScript _firstRevealed;
+    private CardInteractionScript _secondRevealed;
+
+    //Property returns False if second card is opened
+    public bool canReveal 
+    {
+        get { return _secondRevealed == null; }
+    }
+
+    public void CardRevealed(CardInteractionScript card)
+    {
+        //????
+    }
 
 
     private void Start()
@@ -55,6 +68,7 @@ public class SceneControllerScript : MonoBehaviour
 
 
                 // Moving it due on grid
+                // Original card is in lower-left corner
                 float posX = (offset_X * i) + startPos.x;
                 float posY = (offset_Y * j) + startPos.y;
                 card.transform.position = new Vector3(posX, posY, startPos.z);

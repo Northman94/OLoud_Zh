@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
+// Should be attached to core FaceCar Obj
 public class CardInteractionScript : MonoBehaviour
 {
     [SerializeField]
@@ -30,9 +31,16 @@ public class CardInteractionScript : MonoBehaviour
     {
         Debug.Log("Card was Clicked On!");
 
-        if (cardBack.activeSelf)
+        if (cardBack.activeSelf && controller.canReveal)
         {
             cardBack.SetActive(false);
+            controller.CardRevealed(this); //Informing controller of card opening
         }
+    }
+
+    // Close card if pair matching Failed
+    public void Unreveal()
+    {
+        cardBack.SetActive(true);
     }
 }
