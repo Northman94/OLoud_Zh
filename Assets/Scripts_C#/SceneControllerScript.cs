@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using TMPro;
 
 //Should be attached to SceneController Obj
 public class SceneControllerScript : MonoBehaviour
@@ -16,7 +17,8 @@ public class SceneControllerScript : MonoBehaviour
     private CardInteractionScript originalFaceCard; //CardFace in a Scene reference, with relevant Script on it
     [SerializeField]
     private Sprite[] images; // Array of Links to Sprite Faces
-
+    [SerializeField]
+    private TMP_Text scoreLabel;
 
     private CardInteractionScript _firstRevealed;
     private CardInteractionScript _secondRevealed;
@@ -119,7 +121,7 @@ public class SceneControllerScript : MonoBehaviour
         if (_firstRevealed.id == _secondRevealed.id)
         {
             _score++;
-            Debug.Log("Score: " + _score);
+            scoreLabel.text = "Sсore: " + _score;
         }
         else
         {
