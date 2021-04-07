@@ -21,25 +21,15 @@ public class SceneControllerScript : MonoBehaviour
     private CardInteractionScript _firstRevealed;
     private CardInteractionScript _secondRevealed;
 
+    private int _score = 0;
+
+
     //Property returns False if second card is opened
     public bool canReveal 
     {
         get { return _secondRevealed == null; }
     }
 
-    public void CardRevealed(CardInteractionScript card)
-    {
-        if (_firstRevealed == null)
-        {
-            _firstRevealed = card;
-        }
-        else
-        {
-            _secondRevealed = card;
-
-            Debug.Log("Match? " + (_firstRevealed.id == _secondRevealed.id));
-        }
-    }
 
 
     private void Start()
@@ -102,7 +92,62 @@ public class SceneControllerScript : MonoBehaviour
 
             newArray[r] = tmp;
         }
-
         return newArray;
     }
+
+
+
+    public void CardRevealed(CardInteractionScript card)
+    {
+        if (_firstRevealed == null)
+        {
+            _firstRevealed = card;
+        }
+        else
+        {
+            _secondRevealed = card;
+
+            Debug.Log("Match? " + (_firstRevealed.id == _secondRevealed.id));
+
+            StartCoroutine(CheckMatch());
+        }
+    }
+
+
+    private IEnumerator CheckMatch()
+    {
+        if (_firstRevealed.id == _secondRevealed.id)
+        {
+            _score++;
+            Debug.Log("Score: " + _score);
+        }
+        else
+        {
+            yield return new WaitForSeconds(0.5f);
+
+            _firstRevealed.Unreveal();
+            _secondRevealed.Unreveal();
+        }
+        _firstRevealed = null;
+        _secondRevealed = null;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
