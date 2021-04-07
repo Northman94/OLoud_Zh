@@ -1,6 +1,8 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using TMPro;
+
 
 //Should be attached to SceneController Obj
 public class SceneControllerScript : MonoBehaviour
@@ -10,7 +12,6 @@ public class SceneControllerScript : MonoBehaviour
 
     public const float offset_X = 2f;
     public const float offset_Y = 2.5f;
-
 
 
     [SerializeField]
@@ -135,7 +136,10 @@ public class SceneControllerScript : MonoBehaviour
     }
 
 
-
+    public void Restart()
+    {
+        SceneManager.LoadScene("GameScene");
+    }
 
 
 
